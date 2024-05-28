@@ -1,0 +1,197 @@
+:root{
+    --pri-color: #797f91;
+    --pri-color-title: #727e9d;
+    --pri-color-red: #ff0000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Be Vietnam Pro';
+    font-weight: 300;
+    height: 100%;
+    background-color: #B7c1dc;
+    position: relative;
+}
+
+.header{
+    background-color: var(--pri-color);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    /* position: fixed; */
+    width: 100%;
+    z-index: 1;
+    color: white;
+    font-size: 23px;
+}
+
+.header a{
+    text-decoration: none;
+    color: white;
+}
+
+.header .header-buttons{
+    display: flex;
+}
+
+.header .header-buttons .home{
+    border: 2px solid white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    color: var(--pri-color);
+    background-color: white;
+}
+
+.header .header-buttons .home a{
+    color: var(--pri-color);
+    font-weight: bold;
+}
+
+.header .header-buttons .note-book{
+    border: 2px solid white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.header .header-logout{
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+}
+
+.header .header-logout a{
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin-left: 30px;
+    background-color: white;
+    color: var(--pri-color);
+}
+
+.main{
+    width: 100%;
+    height: calc(100% - 100px);
+    padding: 20px;
+}
+
+.main .main-top{
+    width: 100%;
+    height: 75%;
+    display: flex;
+}
+
+.main .main-top .stream{
+    width: calc(70% - 20px);
+    border: 5px solid white;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.main .main-top .detail{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main .main-top .detail i.volume{
+    position: absolute;
+    right: 30px;
+    font-size: 37px;
+}
+
+.main .main-top .detail .detail-word{
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.main .main-top .detail .detail-sys{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.main .main-top .detail .detail-item{
+    margin: 10px 0;
+}
+
+.detail .detail-item .detail-title{
+    font-size: 18px;
+    font-style: italic;
+}
+
+.detail .detail-item span{
+    height: 0.8px;
+    background-color: #6c6c6c;
+    display: block;
+    margin: 5px 0;
+}
+
+.detail .detail-item .detail-content{
+    font-size: 20px;
+    font-weight: bold;
+    color: #6c6c6c;
+}
+
+.detail .detail-item img{
+    height: 150px;
+    display: inline;
+}
+
+.main .main-botton{
+    width: 100%;
+    height: 20%;
+    border: 5px solid white;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.main .main-botton .item{
+    background-color: white;
+    border-radius: 10px;
+    height: calc(100% - 10px);
+    margin: 5px;
+    padding: 10px;
+    width: 250px;
+    position: relative;
+}
+
+.main-botton .item i{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+}
+
+.main-botton .item .item-word{
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.main-botton .item .item-sys{
+    margin: 10px 0;
+}
+
+.main-botton .item .item-mean{
+    font-weight: bold;
+    color: #6c6c6c;
+    font-size: 20px;
+    font-style: italic;
+}

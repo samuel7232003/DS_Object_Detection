@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="demo3">
+    <output-path>$PROJECT_DIR$/out/artifacts/demo3</output-path>
+    <root id="archive" name="demo3.jar">
+      <element id="module-output" name="DS_Object_Detection" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../Download/03SetupApp/mysql-connector-j-8.3.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

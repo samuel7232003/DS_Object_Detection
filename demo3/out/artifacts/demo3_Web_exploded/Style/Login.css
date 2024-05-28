@@ -1,0 +1,87 @@
+:root{
+    --pri-color: #797f91;
+    --pri-color-title: #727e9d;
+    --pri-color-red: #ff0000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: 'Be Vietnam Pro';
+    font-weight: 300;
+    height: 100%;
+    background-color: #B7c1dc;
+    position: relative;
+}
+
+.header{
+    background-color: var(--pri-color);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    /* position: fixed; */
+    width: 100%;
+    z-index: 1;
+    color: white;
+}
+
+.header .header-welcome{
+    font-size: 23px;
+    font-weight: bold;
+
+}
+
+.header .header-link{
+    font-size: 26px;
+}
+
+.header-link .signup{
+    font-weight: bold;
+    margin-left: 60px;
+}
+
+img.background{
+    position: absolute;
+    max-width: 1100px;
+    width: 100%;
+    top: 136px;
+    left: 54px;
+    z-index: -1;
+}
+
+.main{
+    height: calc(100% - 100px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.main p{
+    color: white;
+    background-color: #B7c1dc;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: bold;
+    border: 2px solid white;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 150px;
+    transition: 0.5s;
+}
+
+.main p:hover{
+    scale: 1.2;
+    box-shadow: #6c6c6c 1px 1px 3px 1px;
+}
