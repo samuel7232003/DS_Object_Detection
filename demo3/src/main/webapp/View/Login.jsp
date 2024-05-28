@@ -23,7 +23,7 @@
 </div>
 <img class="background" src="../Image/back.jpg">
 <div class="main">
-    <a href="Home.jsp"><p >BẮT ĐẦU NGAY!</p></a>
+    <a href="${pageContext.request.contextPath}/homeController"><p >BẮT ĐẦU NGAY!</p></a>
 </div>
 </body>
 </html>

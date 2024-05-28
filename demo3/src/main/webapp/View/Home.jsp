@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ - Công cụ hộ trợ học từ vựng Tiếng Anh</title>
     <link rel="stylesheet" href="../Style/Home.css">
+    <link rel="stylesheet" href="./Style/Home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;700&family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -38,7 +39,14 @@
         socketController.openSocket();
     %>
     <div class="main-top">
-        <div class="stream"></div>
+        <div class="stream">
+            <form action="" method="post"
+                  enctype="multipart/form-data">
+                <input type="file" name="avatar" value="Upload" id="avatar"
+                       accept="image/*" /> <input type="submit" value="Submit"
+                                                  name="usubmit">
+            </form>
+        </div>
         <div class="detail">
             <i class="fa-solid fa-volume-high volume"></i>
             <p id="a" class="detail-word">Mobile phone</p>
@@ -95,7 +103,7 @@
         example = document.getElementById('d');
         example.innerText = d;
         img = document.getElementById('img');
-        img.src = "../Image/"+ e + ".jpg"
+        img.src = "./Image/"+ e + ".jpg"
         console.log(img)
     }
 </script>
