@@ -15,6 +15,10 @@ public class Vocab {
         this.example = example;
     }
 
+    public Vocab(){
+
+    }
+
     public String getIdVocab() {
         return idVocab;
     }

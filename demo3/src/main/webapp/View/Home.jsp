@@ -1,5 +1,6 @@
 <%@ page import="ModelBean.Vocab" %>
-<%@ page import="ModelDATA.VocabDATA" %><%--
+<%@ page import="ModelDATA.VocabDATA" %>
+<%@ page import="Socket.SocketController" %><%--
   Created by IntelliJ IDEA.
   User: Le Viet Thanh
   Date: 5/27/2024
@@ -32,6 +33,10 @@
     </div>
 </div>
 <div class="main">
+    <%
+        SocketController socketController = new SocketController();
+        socketController.openSocket();
+    %>
     <div class="main-top">
         <div class="stream"></div>
         <div class="detail">
@@ -60,16 +65,17 @@
                     Hình ảnh minh họa:
                 </p>
                 <span class="detail-line"></span>
-                <img src="../Image/image 4.png" alt="">
+                <img id="img" src="../Image/image 4.png" alt="">
             </div>
         </div>
     </div>
     <div class="main-botton">
         <%
-            for(Vocab vocab : VocabDATA.getInstance().getAllVocab()){
-
+            for(int i = 0; i < 3; i++){
+                Vocab vocab = new Vocab();
+                vocab = VocabDATA.getInstance().getAllVocab().get(i);
         %>
-        <div onmouseover="show('<%=vocab.getWord()%>','<%=vocab.getSys()%>',' <%=vocab.getMean()%>', '<%=vocab.getExample()%>')" class="item">
+        <div onmouseover="show('<%=vocab.getWord()%>','<%=vocab.getSys()%>',' <%=vocab.getMean()%>', '<%=vocab.getExample()%>', '<%=vocab.getIdVocab()%>')" class="item">
             <p class="item-word"><%=vocab.getWord()%></p>
             <p class="item-sys"><%=vocab.getSys()%></p>
             <p class="item-mean"><%=vocab.getMean()%></p>
@@ -79,7 +85,7 @@
     </div>
 </div>
 <script type="text/javascript">
-    function show( a, b, c, d){
+    function show( a, b, c, d, e){
         word = document.getElementById('a');
         word.innerText = a;
         sys = document.getElementById('b');
@@ -88,6 +94,9 @@
         mean.innerText = c;
         example = document.getElementById('d');
         example.innerText = d;
+        img = document.getElementById('img');
+        img.src = "../Image/"+ e + ".jpg"
+        console.log(img)
     }
 </script>
 </body>
